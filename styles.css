@@ -1049,7 +1049,7 @@ body.sidebar-collapsed {
     width: 100%;
     max-width: 600px;
 
-    height: 70%;
+    height: 800px;
 
     margin: 40px auto;
 
@@ -1172,7 +1172,7 @@ body.sidebar-collapsed {
 
     font-size: 32px;
 
-    color: 	#23272a;
+    color: 	#7289db;
 
     text-shadow:
         0 0 8px 	#23272f,

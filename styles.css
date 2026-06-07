@@ -3,7 +3,9 @@
     font-family: 'Minecraft';
     src: url('/BlockHeaven WebDev/assets/MinecraftRegular-Bmg3.otf') format('opentype');
 }
-
+body{
+    background:red !important;
+}
 /* Apply to EVERYTHING */
 * {
     font-family: 'Minecraft', sans-serif;

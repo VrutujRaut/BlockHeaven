@@ -212,7 +212,7 @@ body {
 
     object-fit: cover;
 
-    image-rendering: auto;
+    image-rendering: crisp-edges;
 
     margin-bottom: 15px;
 

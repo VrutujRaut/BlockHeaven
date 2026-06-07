@@ -206,7 +206,7 @@ body {
 }
 
 /*Here lies .logo */
-.sidebar-logo {
+.sidebar-logo image {
     width: 120px;
     height: 120px;
 

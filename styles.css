@@ -205,11 +205,12 @@ body {
     transition: 0.3s;
 }
 
-.logo {
+/*Here lies .logo */
+.sidebar-logo {
     width: 120px;
     height: 120px;
 
-    object-fit: contain;
+    object-fit: cover;
 
     image-rendering: auto;
 
@@ -1051,7 +1052,7 @@ body.sidebar-collapsed {
     height: 800px;
 
     margin: 40px auto;
-    margin-left: 265px;
+    margin-left: 240px;
 
     border-radius: 10px;
 
@@ -1172,7 +1173,7 @@ body.sidebar-collapsed {
 
     font-size: 32px;
 
-    color: 	#17ff02;
+    color: 	#0c7003;
 
     text-shadow:
         0 0 8px 	#23272f,

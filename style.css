@@ -7,6 +7,10 @@
 /* Apply to EVERYTHING */
 * {
     font-family: 'Minecraft', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
     background-color: #1a1a1a;
 }
 

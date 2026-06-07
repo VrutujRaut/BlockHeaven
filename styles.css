@@ -1,7 +1,7 @@
 /* Load the Minecraft font */
 @font-face {
     font-family: 'Minecraft';
-    src: url('/BlockHeaven WebDev/assets/MinecraftRegular-Bmg3.otf') format('opentype');
+    src: url('assets/MinecraftRegular-Bmg3.otf') format('opentype');
 }
 
 /* Apply to EVERYTHING */

@@ -1045,9 +1045,9 @@ body.sidebar-collapsed {
 
 .discord-widget {
 
-    width: 85%;
+    width: 75%;
 
-    height: 800px;
+    height: 600px;
 
     margin: 40px auto;
     margin-left: 240px;
@@ -1058,6 +1058,8 @@ body.sidebar-collapsed {
         0 0 20px 	#23272a;
 
     border: 5 solid #7289da;
+
+    justify-content: center;
 }
 
 .discord-buttons {
@@ -1112,7 +1114,7 @@ body.sidebar-collapsed {
 
     color: #1a1a1a;
 
-    justify-content: left;
+    justify-content: center;
 
     border-top: 3px solid #4a4a4a;
 
@@ -1160,8 +1162,6 @@ body.sidebar-collapsed {
         0 0 10px rgba(79,195,247,0.08);
 
     background: transparent;
-
-    margin-left: 250px;
 
     justify-content: center;
 

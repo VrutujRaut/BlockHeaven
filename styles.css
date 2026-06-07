@@ -1008,7 +1008,8 @@ body.sidebar-collapsed {
 
     padding: 40px 20px;
 
-    background: transparent;
+    background: #23272a;
+
 }
 
 .discord-title {
@@ -1171,10 +1172,10 @@ body.sidebar-collapsed {
 
     font-size: 32px;
 
-    color: 	#ffffff;
+    color: 	#23272a;
 
     text-shadow:
-        0 0 8px 	#ffffff,
+        0 0 8px 	#23272f,
         2px 2px #000;
 
     background: transparent;

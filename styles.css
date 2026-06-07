@@ -428,6 +428,13 @@ body.sidebar-collapsed {
 }
 
 /* Join Section Container */
+.join-title {
+    text-align: center;
+    font-size: 48px;
+    color: #4FC3F7;
+    margin-top: 20px;
+}
+
 .join-container h2 {
 
     width: 85%;

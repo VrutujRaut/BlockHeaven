@@ -1047,11 +1047,11 @@ body.sidebar-collapsed {
 .discord-widget {
 
     width: 100%;
-    max-width: 600px;
 
     height: 800px;
 
     margin: 40px auto;
+    margin-left: 265px;
 
     border-radius: 10px;
 
@@ -1172,7 +1172,7 @@ body.sidebar-collapsed {
 
     font-size: 32px;
 
-    color: 	#7289db;
+    color: 	#17ff02;
 
     text-shadow:
         0 0 8px 	#23272f,

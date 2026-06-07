@@ -1025,8 +1025,6 @@ body.sidebar-collapsed {
 
     margin-bottom: 15px;
 
-    animation: mcGlow 8s infinite ease-in-out;
-
     background: transparent;
 }
 
@@ -1047,7 +1045,7 @@ body.sidebar-collapsed {
 
 .discord-widget {
 
-    width: 100%;
+    width: 85%;
 
     height: 800px;
 
@@ -1058,6 +1056,8 @@ body.sidebar-collapsed {
 
     box-shadow:
         0 0 20px 	#23272a;
+
+    border: 5 solid #7289da;
 }
 
 .discord-buttons {
@@ -1079,7 +1079,7 @@ body.sidebar-collapsed {
 
     padding: 15px 30px;
 
-    color: white;
+    color: #7289da;
 
     text-decoration: none;
 
@@ -1111,6 +1111,14 @@ body.sidebar-collapsed {
     background: #7289da;
 
     color: #1a1a1a;
+
+    justify-content: left;
+
+    border-top: 3px solid #4a4a4a;
+
+    margin-left: 250;
+
+    width: auto;
 }
 
 .join-btn:hover {
@@ -1152,6 +1160,13 @@ body.sidebar-collapsed {
         0 0 10px rgba(79,195,247,0.08);
 
     background: transparent;
+
+    margin-left: 250px;
+
+    justify-content: center;
+
+    width:auto;
+    max-width: 100px;
 }
 
 .stat-card h3 {

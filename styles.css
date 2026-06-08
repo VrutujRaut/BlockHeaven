@@ -210,13 +210,11 @@ body {
     width: 120px;
     height: 120px;
 
-    object-fit: contain;
+    object-fit: scale-down;
 
     image-rendering: pixelated;
 
     margin-bottom: 15px;
-
-    transition: 0.5s;
 }
 
 /* Sidebar Links Area */
@@ -1054,7 +1052,7 @@ body.sidebar-collapsed {
     height: 600px;
 
     margin: 40px auto;
-    margin-left: 40px;
+    margin-left: 60px;
 
     border-radius: 10px;
 
@@ -1174,10 +1172,10 @@ body.sidebar-collapsed {
 
     background: transparent;
 
-    justify-content: center;
+    justify-content: right;
 
     width:auto;
-    height: 250px;
+    height: auto;
 }
 
 .stat-card h3 {
@@ -1197,7 +1195,7 @@ body.sidebar-collapsed {
 
 .stat-card p {
 
-    font-size: 96px;
+    font-size: auto;
 
     color: 	#0c7003;
 
@@ -1206,6 +1204,8 @@ body.sidebar-collapsed {
         2px 2px #000;
 
     background: transparent;
+
+    justify-content: center;
 }
 
 /* =========================

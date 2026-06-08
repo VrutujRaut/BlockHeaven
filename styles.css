@@ -1024,6 +1024,8 @@ body.sidebar-collapsed {
         3px 3px #000;
 
     margin-bottom: 15px;
+    margin-left: auto;
+    justify-content: center;
 
     background: transparent;
 }
@@ -1039,8 +1041,10 @@ body.sidebar-collapsed {
         3px 3px #000;
 
     margin-bottom: 40px;
+    margin-left: auto;
 
     background: transparent;
+    justify-content: center;
 }
 
 .discord-widget {
@@ -1050,7 +1054,7 @@ body.sidebar-collapsed {
     height: 600px;
 
     margin: 40px auto;
-    margin-left: 240px;
+    margin-left: 40px;
 
     border-radius: 10px;
 
@@ -1095,10 +1099,11 @@ body.sidebar-collapsed {
 
     transition: 0.2s;
 
-    font-size: 18px;
+    font-size: 30px;
 
-    height: 122px;
-    width: 416px;
+    height: auto;
+    width: auto;
+    
 }
 
 .discord-btn:hover {
@@ -1119,12 +1124,14 @@ body.sidebar-collapsed {
 
     justify-content: center;
 
+    font-size: 30px;
+
     border-top: 3px solid #4a4a4a;
 
     margin-left: 250;
 
-    height: 122px;
-    width: 416px;
+    width: auto;
+    height: auto;
 }
 
 .join-btn:hover {
@@ -1170,7 +1177,7 @@ body.sidebar-collapsed {
     justify-content: center;
 
     width:auto;
-    max-width: 100px;
+    height: 250px;
 }
 
 .stat-card h3 {

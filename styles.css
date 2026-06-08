@@ -1096,6 +1096,9 @@ body.sidebar-collapsed {
     transition: 0.2s;
 
     font-size: 18px;
+
+    height: 122px;
+    width: 416px;
 }
 
 .discord-btn:hover {
@@ -1120,7 +1123,8 @@ body.sidebar-collapsed {
 
     margin-left: 250;
 
-    width: auto;
+    height: 122px;
+    width: 416px;
 }
 
 .join-btn:hover {

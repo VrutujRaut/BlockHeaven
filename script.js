@@ -326,3 +326,34 @@ document.addEventListener(
 
     }
 );
+
+
+/*==========================
+    AGREE BUTTON
+==========================*/
+
+const agreeBtn =
+document.getElementById("agreeBtn");
+
+if (agreeBtn) {
+
+    agreeBtn.addEventListener(
+        "click",
+        () => {
+
+            const modal =
+            document.getElementById(
+                "termsModal"
+            );
+
+            if (modal) {
+
+                modal.style.display =
+                "none";
+
+            }
+
+        }
+    );
+
+}

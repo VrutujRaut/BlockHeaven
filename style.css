@@ -169,8 +169,29 @@
 @font-face {
     font-family: 'Minecraft';
     src: url('assets/MinecraftRegular-Bmg3.otf') format('opentype');
+
 }
 
+body{
+
+    font-size:18px;
+}
+
+h1{
+    font-size:clamp(3rem,5vw,5rem);
+}
+
+h2{
+    font-size:clamp(2rem,4vw,3rem);
+}
+
+h3{
+    font-size:1.6rem;
+}
+
+p{
+    font-size:1.15rem;
+}
 
 /* =====================================================
    RESET
@@ -414,21 +435,28 @@ body.sidebar-collapsed {
    ===================================================== */
 
 .mobile-warning {
-    position: fixed;
+    display: none;
+}
+@media (max-width: 768px) {
 
-    top: 0;
-    left: 0;
+    .mobile-warning {
+    
+        position: fixed;
 
-    width: 100%;
-    height: 100%;
+        top: 0;
+        left: 0;
 
-    background-color: rgba(0, 0, 0, 0.85);
+        width: 100%;
+        height: 100%;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+        background-color: rgba(0, 0, 0, 0.85);
 
-    z-index: 5000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        z-index: 5000;
+    }
 }
 
 
@@ -611,20 +639,33 @@ body.home-page .info-box h4 {
    PLAYER COUNTER
    ===================================================== */
 
-body.home-page .emerald-counter {
+body.home-page .emerald-counter{
 
-    margin-top: 30px;
+    background:#2E8B57;
 
-    font-size: clamp(1.2rem, 2vw, 2rem);
+    padding:16px 28px;
 
-    text-align: center;
+    border-top:4px solid #50C878;
+    border-left:4px solid #50C878;
 
-    color: #55ff55;
+    border-right:4px solid #145A32;
+    border-bottom:4px solid #145A32;
+
+    border-radius:0;
+
+    width:fit-content;
+
+    margin:30px auto;
+
+    color:white;
+
+    font-size:28px;
 
     text-shadow:
-        0 0 8px #55ff55,
-        0 0 16px #55ff55;
+        0 0 8px #50C878,
+        2px 2px #000;
 
+    animation:mcEmeraldGlow 2s infinite alternate;
 }
 
 
@@ -1081,16 +1122,26 @@ body.join-page .form-container {
    GOOGLE FORM
    ===================================================== */
 
-body.join-page .form-container iframe {
+body.join-page .form-container iframe{
 
-    width: 100%;
+    filter:
+        invert(92%)
+        hue-rotate(180deg)
+        brightness(88%)
+        contrast(92%)
+        saturate(80%);
 
-    height: 1200px;
+    background:#111;
+}
 
-    border: none;
+.form-container{
 
-    display: block;
+    background:#111;
 
+    padding:15px;
+
+    box-shadow:
+        0 0 20px rgba(79,195,247,.2);
 }
 
 
@@ -1569,11 +1620,12 @@ body.rules-page .rules-container {
    TITLE
    ===================================================== */
 
-body.rules-page .rules-title {
+body.rules-page .rules-title{
 
-    text-align: center;
+    animation:mcNetherGlow 3s infinite;
 
-    font-size: clamp(2.2rem, 5vw, 4rem);
+    font-size:clamp(3rem,6vw,5rem);
+
 
     margin-bottom: 15px;
 
@@ -1607,11 +1659,11 @@ body.rules-page .rules-subtitle {
 
 body.rules-page .rule-card {
 
-    background-color: #23201d;
+    background-color: #231710;
 
     border: 2px solid #4a3425;
 
-    border-left: 6px solid #ff6a00;
+    border-left:8px solid #ff5500;
 
     border-radius: 12px;
 
@@ -1620,7 +1672,8 @@ body.rules-page .rule-card {
     margin-bottom: 20px;
 
     box-shadow:
-        0 0 20px rgba(0, 0, 0, 0.3);
+        0 0 15px rgba(255,85,0,.3),
+        0 0 30px rgba(255,60,0,.15);
 
     transition:
         transform 0.2s ease,
@@ -1634,12 +1687,15 @@ body.rules-page .rule-card {
    CARD HOVER
    ===================================================== */
 
-body.rules-page .rule-card:hover {
+body.rules-page .rule-card:hover{
 
-    transform: translateY(-3px);
+    border-left-color:#ffae00;
 
-    border-left-color: #ffae00;
+    box-shadow:
+        0 0 20px rgba(255,170,0,.5),
+        0 0 40px rgba(255,85,0,.3);
 
+    transform:translateY(-5px);
 }
 
 
@@ -1648,14 +1704,13 @@ body.rules-page .rule-card:hover {
    CARD TITLE
    ===================================================== */
 
-body.rules-page .rule-card h3 {
+body.rules-page .rule-card h3{
 
-    color: #ffae00;
+    color:#ffae00;
 
-    margin-bottom: 12px;
-
-    font-size: 1.3rem;
-
+    text-shadow:
+        0 0 8px #ffae00,
+        0 0 18px #ff6a00;
 }
 
 
@@ -2009,7 +2064,34 @@ body.support-page .faq-item p {
 
 }
 
+body.support-page .community-box,
+body.support-page .staff-box,
+body.support-page .contact-box,
+body.support-page .faq-item{
 
+    background:#1d1d1d;
+
+    border-top:4px solid #5a5a5a;
+    border-left:4px solid #5a5a5a;
+
+    border-right:4px solid #111;
+    border-bottom:4px solid #111;
+
+    box-shadow:
+        0 0 20px rgba(0,0,0,.5),
+        0 0 15px rgba(79,195,247,.1);
+}
+
+body.support-page .faq-item:hover,
+body.support-page .community-box:hover,
+body.support-page .staff-box:hover,
+body.support-page .contact-box:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+        0 0 25px rgba(79,195,247,.25);
+}
 
 /* =====================================================
    MOBILE

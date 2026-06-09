@@ -553,33 +553,7 @@ body.home-page .main-title {
 }
 
 
-/* Minecraft Glow */
 
-@keyframes mcGlow {
-
-    0% {
-
-        color: #55ffff;
-
-        text-shadow:
-            0 0 8px #55ffff,
-            0 0 18px #55ffff,
-            0 0 35px #55ffff;
-
-    }
-
-    100% {
-
-        color: #ffaa00;
-
-        text-shadow:
-            0 0 8px #ffaa00,
-            0 0 18px #ffaa00,
-            0 0 35px #ffaa00;
-
-    }
-
-}
 
 
 /* =====================================================
@@ -2554,4 +2528,363 @@ body.shop-page #agreeBtn {
 
     }
 
+}
+
+/* =====================================================
+   BLOCKHEAVEN MINECRAFT THEME OVERRIDES
+   Structure = style.css
+   Visuals = styles.css
+===================================================== */
+
+/* Global */
+body{
+    background:#1a1a1a;
+}
+
+/* =====================================================
+   MAIN TITLE
+===================================================== */
+
+body.home-page .main-title,
+body.join-page h1,
+body.shop-page .store-title,
+body.modpack-page .modpack-main-title,
+body.support-page .support-title{
+
+    color:#4FC3F7;
+
+    text-shadow:
+        0 0 8px #4FC3F7,
+        0 0 18px #4FC3F7;
+
+    animation:mcGlow 8s infinite ease-in-out;
+}
+
+/* Diamond → Gold */
+@keyframes mcGlow {
+
+    0%{
+        color:#4FC3F7;
+        text-shadow:
+            0 0 8px #4FC3F7,
+            0 0 16px #4FC3F7;
+    }
+
+    50%{
+        color:#FFD54F;
+        text-shadow:
+            0 0 12px #FFD54F,
+            0 0 24px #FFD54F;
+    }
+
+    100%{
+        color:#4FC3F7;
+        text-shadow:
+            0 0 8px #4FC3F7,
+            0 0 16px #4FC3F7;
+    }
+}
+
+/* =====================================================
+   SIDEBAR
+===================================================== */
+
+.sidebar{
+    background:#101010;
+    border-right:4px solid #2b2b2b;
+}
+
+.sidebar-top{
+    border-bottom:3px solid #2b2b2b;
+}
+
+.toggle-btn{
+
+    background:#1a1a1a;
+
+    border-top:3px solid #3d3d3d;
+    border-left:3px solid #3d3d3d;
+
+    border-right:3px solid #0d0d0d;
+    border-bottom:3px solid #0d0d0d;
+
+    border-radius:0;
+}
+
+.toggle-btn:hover{
+    color:#4FC3F7;
+}
+
+.sidebar-links a{
+
+    background:#1a1a1a;
+
+    border-top:3px solid #3d3d3d;
+    border-left:3px solid #3d3d3d;
+
+    border-right:3px solid #0d0d0d;
+    border-bottom:3px solid #0d0d0d;
+
+    margin:4px 10px;
+}
+
+.sidebar-links a:hover{
+
+    color:#4FC3F7;
+
+    transform:translateX(5px);
+
+    box-shadow:
+        0 0 10px rgba(79,195,247,.4);
+}
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.sidebar-logo{
+
+    image-rendering:pixelated;
+
+    width:90px;
+}
+
+/* =====================================================
+   INFO BOX
+===================================================== */
+
+body.home-page .info-box{
+
+    background:#2b2b2b;
+
+    border-top:4px solid #5a5a5a;
+    border-left:4px solid #5a5a5a;
+
+    border-right:4px solid #1a1a1a;
+    border-bottom:4px solid #1a1a1a;
+
+    border-radius:0;
+
+    box-shadow:
+        0 0 15px rgba(0,0,0,.5);
+}
+
+body.home-page .info-box h2{
+
+    color:#50C878;
+
+    text-shadow:
+        3px 3px #000;
+}
+
+body.home-page .info-box h3{
+
+    color:#4FC3F7;
+
+    text-shadow:
+        2px 2px #000;
+}
+
+body.home-page .info-box h4{
+
+    color:#FFD54F;
+
+    text-shadow:
+        2px 2px #000;
+}
+
+/* =====================================================
+   EMERALD COUNTER
+===================================================== */
+
+body.home-page .emerald-counter{
+
+    background:#2E8B57;
+
+    padding:12px 20px;
+
+    border-top:4px solid #50C878;
+    border-left:4px solid #50C878;
+
+    border-right:4px solid #145A32;
+    border-bottom:4px solid #145A32;
+
+    border-radius:0;
+
+    width:fit-content;
+
+    margin:auto;
+    margin-top:20px;
+
+    animation:mcEmeraldGlow 2s infinite alternate;
+}
+
+/* =====================================================
+   MINECRAFT PANELS
+===================================================== */
+
+.join-container,
+.form-section,
+.modpack-card,
+.rule-card,
+.community-box,
+.staff-box,
+.contact-box,
+.faq-item,
+.rank-card,
+.modal-content{
+
+    background:#1d1d1d !important;
+
+    border-top:4px solid #5a5a5a !important;
+    border-left:4px solid #5a5a5a !important;
+
+    border-right:4px solid #111111 !important;
+    border-bottom:4px solid #111111 !important;
+
+    border-radius:0 !important;
+
+    box-shadow:
+        0 0 20px rgba(0,0,0,.5);
+}
+
+/* =====================================================
+   GUIDE TITLES
+===================================================== */
+
+.guide-title,
+.form-title{
+
+    color:#4FC3F7;
+
+    text-shadow:
+        0 0 8px #4FC3F7,
+        3px 3px #000;
+
+    animation:mcGlow 8s infinite ease-in-out;
+}
+
+.Initial-line{
+
+    color:#4FC3F7;
+
+    text-shadow:
+        0 0 8px #4FC3F7,
+        3px 3px #000;
+}
+
+.form-subtitle{
+
+    color:#FFD54F;
+
+    text-shadow:
+        0 0 6px #FFD54F,
+        2px 2px #000;
+}
+
+/* =====================================================
+   GOOGLE FORM DARK MODE
+===================================================== */
+
+.form-container iframe{
+
+    filter:
+        invert(.92)
+        hue-rotate(180deg)
+        contrast(.9)
+        brightness(.9);
+
+    border-radius:12px;
+
+    box-shadow:
+        0 0 20px rgba(0,0,0,.6),
+        0 0 15px rgba(79,195,247,.12);
+}
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.alt-link,
+.discord-btn,
+.buy-btn,
+.community-btn,
+.download-btn,
+.warning-box button,
+#agreeBtn{
+
+    background:#1a1a1a !important;
+
+    border-top:3px solid #4a4a4a !important;
+    border-left:3px solid #4a4a4a !important;
+
+    border-right:3px solid #0d0d0d !important;
+    border-bottom:3px solid #0d0d0d !important;
+
+    border-radius:0 !important;
+
+    color:white !important;
+}
+
+.alt-link:hover,
+.discord-btn:hover,
+.buy-btn:hover,
+.community-btn:hover,
+.download-btn:hover,
+.warning-box button:hover,
+#agreeBtn:hover{
+
+    color:#4FC3F7 !important;
+
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 0 12px rgba(79,195,247,.4);
+}
+
+/* =====================================================
+   ACTIVE PAGE
+===================================================== */
+
+.sidebar-links a.active{
+
+    color:#50C878;
+
+    box-shadow:
+        0 0 15px rgba(80,200,120,.3);
+}
+
+/* =====================================================
+   MOBILE WARNING
+===================================================== */
+
+.warning-box{
+
+    background:#1f1f1f;
+
+    border-top:4px solid #5a5a5a;
+    border-left:4px solid #5a5a5a;
+
+    border-right:4px solid #111111;
+    border-bottom:4px solid #111111;
+
+    border-radius:0;
+}
+
+.warning-box h1{
+
+    color:#4FC3F7;
+
+    text-shadow:
+        0 0 8px #4FC3F7,
+        3px 3px #000;
+}
+
+.warning-box h2{
+
+    color:#FFD54F;
+
+    text-shadow:
+        0 0 6px #FFD54F,
+        2px 2px #000;
 }

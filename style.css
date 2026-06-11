@@ -166,7 +166,7 @@
    FONT
    ===================================================== */
 
-@font-face {
+* {
     font-family: 'Minecraft';
     src: url('assets/MinecraftRegular-Bmg3.otf') format('opentype');
 

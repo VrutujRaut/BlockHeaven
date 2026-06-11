@@ -321,7 +321,7 @@ a {
     cursor: pointer;
 
     background-color: #2e2e2e;
-    color: white;
+    color:color-mix(in hsl shorter hue, #55ffff 44.5, #ffaa00 55.5);
 
     border-radius: 8px;
 

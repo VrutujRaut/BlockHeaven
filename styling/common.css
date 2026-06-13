@@ -1,0 +1,242 @@
+/* Load the Minecraft font */
+@font-face {
+    font-family: 'Minecraft';
+    src: url('assets/MinecraftRegular-Bmg3.otf') format('opentype');
+}
+
+/* Apply to EVERYTHING */
+* {
+    font-family: 'Minecraft', sans-serif;
+}
+
+body {
+    background-color: #1a1a1a;
+
+    margin-left: 250px;
+
+    padding-top: 20px;
+
+    transition: margin-left 0.3s ease;
+}
+
+/* Layout */
+.side-layout {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 80px;
+
+    margin-top: 0px;
+
+    padding: 20px 40px;
+}
+
+/* Side Images */
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 190px;
+    height: 100vh;
+
+    background: #101010;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 15px;
+
+    border-right: 4px solid #2b2b2b;
+
+    z-index: 1000;
+
+    transition: 0.3s;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* Sidebar Links */
+.sidebar a {
+    color: white;
+
+    text-decoration: none;
+
+    margin: 20px 0;
+
+    font-size: 22px;
+
+    transition: 0.5s;
+}
+
+/* Hover */
+.sidebar a:hover {
+    color: #4FC3F7;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 240px;
+    height: 100vh;
+
+    background: #101010;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 25px;
+
+    border-right: 4px solid #2b2b2b;
+
+    z-index: 1000;
+
+    transition: 0.3s;
+}
+
+/*Here lies .logo */
+.logo{
+    width: 120px;
+    height: 120px;
+
+    object-fit: contain;
+
+    image-rendering: pixelated;
+
+    margin-bottom: 15px;
+}
+
+/* Sidebar Links Area */
+.sidebar-links {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 6px;
+
+    overflow-y: auto;
+
+    padding-bottom: 20px;
+}
+
+.sidebar-links a {
+    width: 82%;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 8px 10px;
+
+    background: #1a1a1a;
+
+    border-top: 3px solid #3d3d3d;
+    border-left: 3px solid #3d3d3d;
+
+    border-right: 3px solid #0d0d0d;
+    border-bottom: 3px solid #0d0d0d;
+
+    transition: 0.2s;
+
+    font-size: 17px;
+}
+
+/* Hover */
+.sidebar-links a:hover {
+    transform: translateX(5px);
+
+    color: #4FC3F7;
+
+    box-shadow: 0 0 10px rgba(79,195,247,0.4);
+}
+
+/* Icons */
+.icon {
+    font-size: 24px;
+
+    min-width: 30px;
+
+    text-align: center;
+}
+
+
+
+
+
+/* Toggle Button */
+.toggle-btn {
+    background: #1a1a1a;
+
+    color: rgb(37, 163, 201);
+
+    border-top: 3px solid #3d3d3d;
+    border-left: 3px solid #3d3d3d;
+
+    border-right: 3px solid #0d0d0d;
+    border-bottom: 3px solid #0d0d0d;
+
+    padding: 8px 12px;
+
+    margin-bottom: 15px;
+
+    cursor: pointer;
+
+    font-size: 20px;
+}
+
+/* Collapsed Sidebar */
+.sidebar.collapsed {
+    width: 90px;
+}
+
+/* Hide Text */
+.sidebar.collapsed .text {
+    display: none;
+}
+
+/* Smaller Logo */
+.sidebar.collapsed .logo {
+    width: 60px;
+    height: 60px;
+}
+
+/* Center Icons */
+.sidebar.collapsed .sidebar-links a {
+    justify-content: center;
+}
+
+/* Expanded Content When Sidebar Collapses */
+body.sidebar-collapsed {
+    margin-left: 105px;
+}
+
+/* Custom Scrollbar */
+.sidebar-links::-webkit-scrollbar {
+    width: 6px;
+}
+
+.sidebar-links::-webkit-scrollbar-thumb {
+    background: #4FC3F7;
+}
+
+.sidebar-links::-webkit-scrollbar-track {
+    background: #111111;
+}

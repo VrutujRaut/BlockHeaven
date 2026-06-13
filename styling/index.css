@@ -1,0 +1,119 @@
+.main-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+
+    padding: 20px;
+    font-size: 52px;
+    background-color: #2F3136;
+
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+    margin-left: 190px;
+
+    animation: mcGlow 8s infinite ease-in-out;
+
+    background: transparent;
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+/* Color changing animation */
+@keyframes mcGlow {
+    0% {
+        color: #4FC3F7; /* Diamond block blue */
+        text-shadow: 0 0 8px #4FC3F7;
+    }
+
+    50% {
+        color: #FFD54F; /* Gold block yellow */
+        text-shadow: 0 0 12px #FFD54F;
+    }
+
+    100% {
+        color: #4FC3F7; /* Back to diamond blue */
+        text-shadow: 0 0 8px #4FC3F7;
+    }
+}
+
+/* Starter Info Box */
+.info-box {
+    font-family: 'Minecraft', sans-serif;
+
+    background: #2b2b2b;
+    color: white;
+
+    width: fit-content;
+
+    margin: 40px auto;
+    padding: 25px 35px;
+
+    border-top: 4px solid #5a5a5a;
+    border-left: 4px solid #5a5a5a;
+
+    border-right: 4px solid #1a1a1a;
+    border-bottom: 4px solid #1a1a1a;
+
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+
+    text-align: center;
+}
+
+/* Title */
+.info-box h2 {
+    color: #50C878; /* Emerald green */
+
+    font-size: 34px;
+
+    margin-bottom: 20px;
+
+    text-shadow: 3px 3px #000;
+}
+
+/* IP Address */
+.info-box h3 {
+    color: #4FC3F7; /* Diamond blue */
+
+    font-size: 24px;
+
+    margin: 15px 0;
+
+    text-shadow: 2px 2px #000;
+}
+
+/* Port + Version */
+.info-box h4 {
+    color: #FFD54F; /* Gold yellow */
+
+    font-size: 20px;
+
+    margin: 10px 0;
+
+    text-shadow: 2px 2px #000;
+}
+
+.emerald-counter {
+    font-family: 'Minecraft', sans-serif;
+    background-color: #2E8B57;
+    color: white;
+
+    padding: 12px 20px;
+
+    border-top: 4px solid #50C878;
+    border-left: 4px solid #50C878;
+
+    border-right: 4px solid #145A32;
+    border-bottom: 4px solid #145A32;
+
+    width: fit-content;
+    margin: auto;
+    margin-top: 20px;
+
+    font-size: 24px;
+}

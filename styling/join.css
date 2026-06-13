@@ -343,6 +343,7 @@
     padding: 10px;
 
     background: transparent;
+    
     filter:
         invert(.92)
         hue-rotate(180deg)

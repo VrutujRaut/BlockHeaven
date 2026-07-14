@@ -63,9 +63,11 @@ body.sidebar-collapsed {
 .sidebar-top {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     width: 100%;
     margin-bottom: 15px;
+    padding: 0 12px 0 12px;
+    gap: 10px;
 }
 
 .logo {
@@ -76,7 +78,7 @@ body.sidebar-collapsed {
     align-items: center;
     object-fit: contain;
     image-rendering: pixelated;
-    margin-bottom: 15px;
+    margin-bottom: 0;
 }
 
 .sidebar-logo {
@@ -94,7 +96,7 @@ body.sidebar-collapsed {
     border-right: 3px solid #0d0d0d;
     border-bottom: 3px solid #0d0d0d;
     padding: 8px 12px;
-    margin-bottom: 15px;
+    margin-bottom: 0;
     cursor: pointer;
     font-size: 20px;
 }
@@ -167,15 +169,31 @@ body.sidebar-collapsed {
 }
 
 .sidebar-links::-webkit-scrollbar {
-    width: 6px;
+    width: 8px;
 }
 
 .sidebar-links::-webkit-scrollbar-thumb {
-    background: var(--accent);
+    background: linear-gradient(180deg, #7ccf4e 0%, #4caf50 100%);
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.1);
 }
 
 .sidebar-links::-webkit-scrollbar-track {
     background: #111111;
+    border-radius: 999px;
+}
+
+html::-webkit-scrollbar {
+    width: 10px;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #7ccf4e 0%, #4caf50 100%);
+    border-radius: 999px;
+}
+
+html::-webkit-scrollbar-track {
+    background: #151515;
 }
 
 .mobile-warning {

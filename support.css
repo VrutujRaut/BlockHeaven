@@ -16,8 +16,9 @@ body.support-page .support-hero {
 body.support-page .support-title {
     font-size: clamp(2.2rem, 5vw, 4rem);
     margin-bottom: 15px;
-    color: #7ccf4e;
-    animation: mcRedstoneGlow 5s ease-in-out infinite alternate;
+    color: #9dff6b;
+    text-shadow: 0 0 10px rgba(157, 255, 107, 0.65), 0 0 25px rgba(71, 205, 88, 0.35);
+    animation: mcEmeraldGlow 4s ease-in-out infinite alternate;
 }
 
 body.support-page .support-subtitle {

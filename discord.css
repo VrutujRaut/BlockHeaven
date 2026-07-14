@@ -1,0 +1,101 @@
+body.discord-page .discord-main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+body.discord-page .discord-title {
+    font-size: clamp(2rem, 4vw, 4rem);
+    margin-bottom: 15px;
+    color: #5865F2;
+    text-shadow: 0 0 10px #5865F2, 0 0 20px #5865F2, 0 0 35px #5865F2;
+}
+
+body.discord-page .discord-subtitle {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    margin-bottom: 35px;
+    color: #d0d0d0;
+}
+
+body.discord-page .discord-widget {
+    width: min(100%, 420px);
+    height: 520px;
+    border-radius: 12px;
+    border: 4px solid #5865F2;
+    background-color: #2b2d31;
+    box-shadow: 0 0 25px rgba(88, 101, 242, 0.4);
+}
+
+body.discord-page .discord-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+body.discord-page .discord-btn {
+    padding: 14px 24px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    background-color: #404EED;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+body.discord-page .discord-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px rgba(88, 101, 242, 0.5);
+}
+
+body.discord-page .join-btn {
+    background-color: #57F287;
+    color: black;
+    font-weight: bold;
+}
+
+body.discord-page .discord-stats {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+body.discord-page .stat-card {
+    width: 220px;
+    padding: 20px;
+    background-color: #242424;
+    border: 3px solid #404040;
+    border-radius: 12px;
+    text-align: center;
+}
+
+body.discord-page .stat-card h3 {
+    margin-bottom: 12px;
+}
+
+body.discord-page .stat-card p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #57F287;
+}
+
+@media (max-width: 768px) {
+    body.discord-page .discord-main {
+        padding-top: 100px;
+    }
+
+    body.discord-page .discord-widget {
+        height: 450px;
+    }
+
+    body.discord-page .stat-card {
+        width: 100%;
+        max-width: 300px;
+    }
+}

@@ -1,0 +1,64 @@
+body.rules-page {
+    min-height: 100vh;
+}
+
+body.rules-page .rules-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 50px 25px;
+}
+
+body.rules-page .rules-title {
+    font-size: clamp(3rem, 6vw, 5rem);
+    margin-bottom: 15px;
+    text-align: center;
+    animation: mcNetherGlow 3s infinite;
+}
+
+body.rules-page .rules-subtitle {
+    text-align: center;
+    color: #b8a89b;
+    margin-bottom: 50px;
+    letter-spacing: 1px;
+}
+
+body.rules-page .rule-card {
+    background-color: #231710;
+    border: 2px solid #4a3425;
+    border-left: 8px solid #ff5500;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 15px rgba(255, 85, 0, 0.3), 0 0 30px rgba(255, 60, 0, 0.15);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+body.rules-page .rule-card:hover {
+    border-left-color: #ffae00;
+    box-shadow: 0 0 20px rgba(255, 170, 0, 0.5), 0 0 40px rgba(255, 85, 0, 0.3);
+    transform: translateY(-5px);
+}
+
+body.rules-page .rule-card h3 {
+    color: #ffae00;
+    text-shadow: 0 0 8px #ffae00, 0 0 18px #ff6a00;
+}
+
+body.rules-page .rule-card p {
+    color: #d8d2cc;
+    line-height: 1.8;
+}
+
+body.rules-page .rule-card:last-child {
+    border-left-color: #ff2200;
+}
+
+@media (max-width: 768px) {
+    body.rules-page .rules-container {
+        padding-top: 100px;
+    }
+
+    body.rules-page .rule-card {
+        padding: 20px;
+    }
+}

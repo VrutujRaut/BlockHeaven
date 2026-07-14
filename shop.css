@@ -1,0 +1,202 @@
+body.shop-page {
+    min-height: 100vh;
+}
+
+body.shop-page .store-hero {
+    text-align: center;
+    padding: 60px 20px 40px;
+}
+
+body.shop-page .store-title {
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    color: #55ff55;
+    animation: mcEmeraldGlow 5s ease-in-out infinite alternate;
+    margin-bottom: 15px;
+}
+
+body.shop-page .store-subtitle {
+    color: #d0d0d0;
+    font-size: 1.1rem;
+}
+
+body.shop-page .discord-notice {
+    width: min(95%, 900px);
+    margin: 0 auto 40px;
+    padding: 25px;
+    text-align: center;
+    background-color: #262626;
+    border: 3px solid #5865F2;
+    border-radius: 12px;
+    color: #e0e0e0;
+    line-height: 1.8;
+}
+
+body.shop-page .rank-grid {
+    width: min(95%, 1400px);
+    margin: 0 auto 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+body.shop-page .rank-card {
+    background-color: #242424;
+    border: 3px solid #4a4a4a;
+    border-radius: 14px;
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+body.shop-page .rank-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+body.shop-page .rank-image {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 15px auto;
+}
+
+body.shop-page .rank-card h2 {
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+}
+
+body.shop-page .price {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #55ff55;
+    margin-bottom: 20px;
+}
+
+body.shop-page .rank-card ul {
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+body.shop-page .rank-card ul li {
+    padding: 8px 0;
+    color: #d8d8d8;
+}
+
+body.shop-page .buy-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    background-color: #55aa55;
+    color: white;
+    cursor: pointer;
+    font-family: inherit;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+body.shop-page .buy-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px rgba(85, 255, 85, 0.4);
+}
+
+body.shop-page .featured {
+    border-color: #55ffff;
+    position: relative;
+    border-left: 6px solid #55ffff;
+}
+
+body.shop-page .featured-badge {
+    position: absolute;
+    top: -12px;
+    right: 15px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background-color: #55ffff;
+    color: black;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+body.shop-page .chicken {
+    border-left: 6px solid #ffe680;
+}
+
+body.shop-page .wolf {
+    border-left: 6px solid #cfcfcf;
+}
+
+body.shop-page .creeper {
+    border-left: 6px solid #55ff55;
+}
+
+body.shop-page .dragon {
+    border-left: 6px solid #b84dff;
+}
+
+body.shop-page .rules-card {
+    border-left: 6px solid #ffaa00;
+}
+
+body.shop-page .modal {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 5000;
+}
+
+body.shop-page .modal-content {
+    width: min(90%, 600px);
+    background-color: #262626;
+    border: 3px solid #ffaa00;
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+}
+
+body.shop-page .modal-content h2 {
+    margin-bottom: 20px;
+    color: #ffaa00;
+}
+
+body.shop-page .modal-content ul {
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+body.shop-page .modal-content li {
+    padding: 8px 0;
+    color: #d5d5d5;
+}
+
+body.shop-page #agreeBtn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    background-color: #55aa55;
+    color: white;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+@media (max-width: 768px) {
+    body.shop-page .store-hero {
+        padding-top: 100px;
+    }
+
+    body.shop-page .rank-grid {
+        grid-template-columns: 1fr;
+    }
+
+    body.shop-page .rank-image {
+        width: 100px;
+        height: 100px;
+    }
+
+    body.shop-page .rank-card {
+        padding: 20px;
+    }
+}

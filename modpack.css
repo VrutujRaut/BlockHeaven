@@ -1,0 +1,135 @@
+body.modpack-page {
+    min-height: 100vh;
+}
+
+body.modpack-page .modpack-page-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 50px 25px;
+}
+
+body.modpack-page .modpack-title-box {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+body.modpack-page .modrinth-dot {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #1bd96a;
+    margin: 0 auto 20px auto;
+    box-shadow: 0 0 12px #1bd96a, 0 0 24px #1bd96a;
+}
+
+body.modpack-page .modpack-main-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: #1bd96a;
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px rgba(27, 217, 106, 0.5);
+    animation: mcEmeraldGlow 5s ease-in-out infinite alternate;
+}
+
+body.modpack-page .modpack-subtitle {
+    color: #bdbdbd;
+    font-size: 1.1rem;
+}
+
+body.modpack-page .modpack-card {
+    background-color: #26292f;
+    border: 2px solid #383d46;
+    border-radius: 18px;
+    padding: 35px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+body.modpack-page .modpack-top {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+body.modpack-page .modpack-icon {
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    border-radius: 20px;
+    background-color: #1bd96a;
+    color: #111;
+}
+
+body.modpack-page .modpack-info h1 {
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+body.modpack-page .modpack-info h2 {
+    color: #9fa6b2;
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+body.modpack-page .modpack-description {
+    line-height: 1.8;
+    color: #d6d6d6;
+    margin-bottom: 30px;
+}
+
+body.modpack-page .modpack-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 35px;
+}
+
+body.modpack-page .modpack-tags span {
+    padding: 8px 14px;
+    border-radius: 999px;
+    background-color: #1bd96a22;
+    border: 1px solid #1bd96a55;
+    color: #1bd96a;
+    font-size: 0.9rem;
+}
+
+body.modpack-page .download-btn {
+    display: inline-block;
+    padding: 14px 24px;
+    border-radius: 12px;
+    background-color: #1bd96a;
+    color: #111;
+    font-weight: bold;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+body.modpack-page .download-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(27, 217, 106, 0.4);
+}
+
+@media (max-width: 768px) {
+    body.modpack-page .modpack-page-content {
+        padding-top: 100px;
+    }
+
+    body.modpack-page .modpack-card {
+        padding: 25px;
+    }
+
+    body.modpack-page .modpack-top {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    body.modpack-page .modpack-icon {
+        width: 80px;
+        height: 80px;
+    }
+
+    body.modpack-page .modpack-info h1 {
+        font-size: 1.6rem;
+    }
+}

@@ -84,8 +84,13 @@ body.sidebar-collapsed {
 .sidebar-logo {
     width: 90px;
     height: auto;
+    display:block;
+    border: 2px solid red;
+    background: yellow;
     object-fit: contain;
     image-rendering: pixelated;
+    position: relative;
+    z-index: 9999
 }
 
 .toggle-btn {

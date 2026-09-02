@@ -90,7 +90,6 @@ body.sidebar-collapsed {
     object-fit: contain;
     image-rendering: pixelated;
     position: relative;
-    z-index: 9999
 }
 
 .toggle-btn {

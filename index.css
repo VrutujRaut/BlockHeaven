@@ -56,6 +56,16 @@ body.home-page .info-box h4 {
     text-shadow: 2px 2px #000;
 }
 
+body.home-page .server-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    width: min(90%, 700px);
+    margin: 25px auto 0;
+}
+
 body.home-page .emerald-counter {
     font-family: 'Minecraft', sans-serif;
     background-color: #2E8B57;
@@ -66,12 +76,134 @@ body.home-page .emerald-counter {
     border-right: 4px solid #145A32;
     border-bottom: 4px solid #145A32;
     width: fit-content;
-    margin: 25px auto 0;
+    margin: 0;
     font-size: 24px;
 }
 
 body.home-page #playerCount {
     font-weight: bold;
+}
+
+body.home-page .notify-button {
+    font-family: inherit;
+    font-size: 20px;
+    color: white;
+    background: #8f2d2d;
+    border-top: 4px solid #d85c5c;
+    border-left: 4px solid #d85c5c;
+    border-right: 4px solid #4d1212;
+    border-bottom: 4px solid #4d1212;
+    padding: 13px 24px;
+    margin: 0;
+    cursor: pointer;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+body.home-page .notify-button:hover,
+body.home-page .notify-button:focus-visible {
+    filter: brightness(1.2);
+    transform: translateY(-2px);
+    outline: 2px solid var(--gold);
+    outline-offset: 3px;
+}
+
+.notification-modal[hidden] {
+    display: none;
+}
+
+.notification-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 3000;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.78);
+}
+
+.notification-card {
+    position: relative;
+    width: min(100%, 480px);
+    padding: 34px 30px 28px;
+    text-align: center;
+    background: #242424;
+    border-top: 4px solid #5a5a5a;
+    border-left: 4px solid #5a5a5a;
+    border-right: 4px solid #111;
+    border-bottom: 4px solid #111;
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.7);
+}
+
+.notification-icon {
+    font-size: 42px;
+    margin-bottom: 12px;
+}
+
+.notification-card h2 {
+    color: var(--gold);
+    font-size: 26px;
+    line-height: 1.25;
+    text-shadow: 2px 2px #000;
+}
+
+.notification-card p {
+    margin-top: 16px;
+    color: #e2e2e2;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.notification-status {
+    min-height: 24px;
+    color: var(--accent-2) !important;
+}
+
+.notification-close {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    border: 0;
+    background: transparent;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.notification-actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.notification-actions button {
+    font-family: inherit;
+    padding: 11px 16px;
+    cursor: pointer;
+    border-top: 3px solid #5a5a5a;
+    border-left: 3px solid #5a5a5a;
+    border-right: 3px solid #111;
+    border-bottom: 3px solid #111;
+}
+
+.notification-enable {
+    background: #2e8b57;
+    color: white;
+}
+
+.notification-cancel {
+    background: #1a1a1a;
+    color: #bbb;
+}
+
+.notification-actions button:hover,
+.notification-actions button:focus-visible,
+.notification-close:focus-visible {
+    color: var(--gold);
+    outline: 2px solid var(--gold);
+    outline-offset: 2px;
 }
 
 @media (max-width: 768px) {
@@ -84,5 +216,9 @@ body.home-page #playerCount {
     body.home-page .info-box {
         width: calc(100% - 30px);
         padding: 25px;
+    }
+
+    body.home-page .server-actions {
+        width: calc(100% - 30px);
     }
 }

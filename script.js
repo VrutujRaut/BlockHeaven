@@ -25,12 +25,16 @@ async function updatePlayerCount() {
             counter.textContent =
             data.players.online;
 
+            handleServerStatus(true);
+
         }
 
         else {
 
             counter.textContent =
             "Offline";
+
+            handleServerStatus(false);
 
         }
 
@@ -48,9 +52,99 @@ async function updatePlayerCount() {
 
         }
 
+        handleServerStatus(false);
+
     }
 
 }
+
+/* =========================
+   SERVER START NOTIFICATIONS
+========================= */
+
+const serverStatusKey = "blockheaven-server-online";
+
+function handleServerStatus(isOnline) {
+
+    const previousStatus = localStorage.getItem(serverStatusKey);
+    const notifyButton = document.getElementById("notifyButton");
+
+    if (notifyButton) {
+        notifyButton.hidden = isOnline;
+    }
+
+    if (isOnline && previousStatus === "false" && "Notification" in window && Notification.permission === "granted") {
+
+        new Notification("BlockHeaven is online!", {
+            body: "The server has started. Come join the adventure!",
+            icon: "assets/images/favicon.png"
+        });
+
+    }
+
+    localStorage.setItem(serverStatusKey, String(isOnline));
+
+}
+
+function setupNotifications() {
+
+    const notifyButton = document.getElementById("notifyButton");
+    const modal = document.getElementById("notificationModal");
+    const closeButton = document.getElementById("notificationClose");
+    const cancelButton = document.getElementById("notificationCancel");
+    const enableButton = document.getElementById("notificationEnable");
+    const status = document.getElementById("notificationStatus");
+
+    if (!notifyButton || !modal || !closeButton || !cancelButton || !enableButton || !status) return;
+
+    const closeModal = () => {
+        modal.hidden = true;
+        notifyButton.focus();
+    };
+
+    const openModal = () => {
+        modal.hidden = false;
+        status.textContent = "";
+
+        if (!("Notification" in window)) {
+            status.textContent = "Notifications are not supported by this browser.";
+            enableButton.disabled = true;
+        } else if (Notification.permission === "granted") {
+            status.textContent = "Notifications are already enabled on this device.";
+            enableButton.textContent = "Notifications Enabled";
+            enableButton.disabled = true;
+        }
+
+        enableButton.focus();
+    };
+
+    notifyButton.addEventListener("click", openModal);
+    closeButton.addEventListener("click", closeModal);
+    cancelButton.addEventListener("click", closeModal);
+
+    modal.addEventListener("click", (event) => {
+        if (event.target === modal) closeModal();
+    });
+
+    enableButton.addEventListener("click", async () => {
+
+        if (!("Notification" in window)) return;
+
+        const permission = await Notification.requestPermission();
+
+        if (permission === "granted") {
+            status.textContent = "You’re all set! We’ll notify you when BlockHeaven starts.";
+            enableButton.textContent = "Notifications Enabled";
+            enableButton.disabled = true;
+        } else {
+            status.textContent = "Permission was not granted. You can enable it in your browser settings.";
+        }
+
+    });
+
+}
+
+setupNotifications();
 
 updatePlayerCount();
 

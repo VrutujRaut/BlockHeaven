@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BlockHeaven⛏</title>
     <link rel="icon" type="image/png" href="assets/images/short.png">
-    <link rel="apple-touch-icon" href="assets/images/BlockHeavenLogo.png">
+    <link rel="apple-touch-icon" href="assets/images/BlockHeaven Logo.png">
     <link rel="stylesheet" href="common.css">
     <link rel="stylesheet" href="index.css">
 </head>
@@ -25,9 +25,28 @@
         <h4>Version - Paper 26.2</h4>
 
     </div>
-    <div class="emerald-counter" id="players">
-    💚 Players Online: <span id="playerCount">0</span>
-</div>
+    <div class="server-actions" aria-label="Server status and notifications">
+        <div class="emerald-counter" id="players">
+            💚 Players Online: <span id="playerCount">0</span>
+        </div>
+        <button class="notify-button" id="notifyButton" type="button" aria-haspopup="dialog" aria-controls="notificationModal">
+            🔔 Get Notified
+        </button>
+    </div>
+
+    <div class="notification-modal" id="notificationModal" role="dialog" aria-modal="true" aria-labelledby="notificationTitle" hidden>
+        <div class="notification-card">
+            <button class="notification-close" id="notificationClose" type="button" aria-label="Close notification settings">×</button>
+            <div class="notification-icon" aria-hidden="true">🔔</div>
+            <h2 id="notificationTitle">Get notified when BlockHeaven starts</h2>
+            <p>Allow browser notifications and we’ll let you know when the server changes from offline to online.</p>
+            <p class="notification-status" id="notificationStatus" role="status"></p>
+            <div class="notification-actions">
+                <button class="notification-enable" id="notificationEnable" type="button">Allow Notifications</button>
+                <button class="notification-cancel" id="notificationCancel" type="button">Maybe Later</button>
+            </div>
+        </div>
+    </div>
     <div class="side-layout">
 
 </div>

@@ -186,18 +186,6 @@ window.addEventListener(
             "loaded"
         );
 
-        const formSection =
-        document.querySelector(
-            ".form-section"
-        );
-
-        if (formSection) {
-
-            formSection.style.opacity =
-            "1";
-
-        }
-
     }
 );
 

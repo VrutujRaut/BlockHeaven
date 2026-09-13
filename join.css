@@ -239,9 +239,8 @@ body.join-page .alt-link:hover {
 }
 .form-section {
 
-    opacity: 0;
-
-    transition: opacity 1s ease;
+    /* Keep the application and its loading state visible immediately. */
+    opacity: 1;
 }
 /* Google Form */
 

@@ -18,6 +18,7 @@ Opening `index.html` directly also shows the layout, but serving the folder is c
 ## What visitors can do
 
 - Check the server address: `BlockHeaven.aternos.me` and port `63116`.
+- Preview and share the site from [preview.html](preview.html). The home page includes Open Graph and Twitter Card metadata and uses `assets/images/social-preview.jpg` for link previews.
 - See the player count and optionally enable a browser notification when the server changes from offline to online.
 - Apply to join through the embedded Google Form on [join.html](join.html).
 - Join the community from [discord.html](discord.html), read [rules.html](rules.html), browse ranks in [shop.html](shop.html), download the official modpack from [modpack.html](modpack.html), or find help in [support.html](support.html).
@@ -29,6 +30,7 @@ The join page says Discord is required for authentication and events. Java and B
 | Need to change | File |
 | --- | --- |
 | Home-page server details, player counter, notification prompt | `index.html`, `index.css`, `script.js` |
+| Social link preview and share actions | `preview.html`, `preview.css`, `assets/images/social-preview.jpg` |
 | Join instructions and application form | `join.html`, `join.css` |
 | Discord widget and invite links | `discord.html`, `script.js` |
 | Server rules | `rules.html`, `rules.css` |
@@ -40,6 +42,8 @@ The join page says Discord is required for authentication and events. Java and B
 ## Keeping it current
 
 When server details change, update both the visible home-page values in `index.html` and the `serverIP` value in `script.js`. When replacing the modpack, update its filename, displayed version, and download link together in `modpack.html`.
+
+The social metadata currently points to the standard GitHub Pages address `https://vrutujraut.github.io/BlockHeaven/`. If the site is published on a different domain, update the canonical, Open Graph, and Twitter image URLs in `index.html` and `preview.html` to match it. Social platforms fetch these tags from the published page; local previews do not appear in public shares until the site and preview image are deployed.
 
 `script.js` refreshes the Minecraft server status every 30 seconds using `api.mcsrvstat.us` and reads Discord widget data from Discord's public widget endpoint. These live features need an internet connection and can show an error or remain unchanged if the external service is unavailable.
 

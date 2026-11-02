@@ -1,0 +1,21 @@
+body.home-page .share-link {
+    display: inline-block;
+    margin: 18px auto 0;
+    padding: 12px 18px;
+    color: white;
+    background: #1d1d1d;
+    border-top: 3px solid #5a5a5a;
+    border-left: 3px solid #5a5a5a;
+    border-right: 3px solid #111;
+    border-bottom: 3px solid #111;
+    text-decoration: none;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+body.home-page .share-link:hover,
+body.home-page .share-link:focus-visible {
+    color: var(--gold);
+    transform: translateY(-2px);
+    outline: 2px solid var(--gold);
+    outline-offset: 3px;
+}

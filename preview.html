@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Preview and share the BlockHeaven Minecraft SMP website.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="BlockHeaven">
+    <meta property="og:title" content="BlockHeaven | To Infinity and Beyond!">
+    <meta property="og:description" content="Your next Minecraft adventure starts here. Join the BlockHeaven SMP community.">
+    <meta property="og:url" content="https://vrutujraut.github.io/BlockHeaven/">
+    <meta property="og:image" content="https://vrutujraut.github.io/BlockHeaven/assets/images/social-preview.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="BlockHeaven — To Infinity and Beyond! Minecraft SMP">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="BlockHeaven | To Infinity and Beyond!">
+    <meta name="twitter:description" content="Your next Minecraft adventure starts here. Join the BlockHeaven SMP community.">
+    <meta name="twitter:image" content="https://vrutujraut.github.io/BlockHeaven/assets/images/social-preview.jpg">
+    <title>Share BlockHeaven</title>
+    <link rel="stylesheet" href="preview.css">
+</head>
+<body>
+    <main class="share-shell">
+        <a class="back-link" href="index.html">← Back to BlockHeaven</a>
+        <p class="eyebrow">SPREAD THE WORD</p>
+        <h1>Bring your friends to <span>BlockHeaven</span></h1>
+        <p class="intro">Share the server with your crew. Your link is ready, and social apps can show this preview when the site is published.</p>
+
+        <section class="preview-card" aria-label="Social media link preview">
+            <img src="assets/images/social-preview.jpg" alt="BlockHeaven — To Infinity and Beyond! Minecraft SMP">
+            <div class="preview-copy">
+                <p class="preview-domain" id="previewDomain">BLOCKHEAVEN</p>
+                <h2>BlockHeaven | To Infinity and Beyond!</h2>
+                <p>Your next Minecraft adventure starts here. Join the BlockHeaven SMP community.</p>
+            </div>
+        </section>
+
+        <div class="share-actions">
+            <button class="primary-action" id="shareButton" type="button">↗ Share link</button>
+            <button class="secondary-action" id="copyButton" type="button">▣ Copy link</button>
+        </div>
+        <p class="share-status" id="shareStatus" role="status" aria-live="polite"></p>
+        <a class="visit-link" href="index.html">Visit the BlockHeaven website →</a>
+    </main>
+    <script>
+        const siteUrl = new URL('./', window.location.href).href;
+        const domainLabel = document.getElementById('previewDomain');
+        const copyButton = document.getElementById('copyButton');
+        const shareButton = document.getElementById('shareButton');
+        const status = document.getElementById('shareStatus');
+        domainLabel.textContent = new URL(siteUrl).host || 'BLOCKHEAVEN';
+
+        copyButton.addEventListener('click', async () => {
+            try {
+                await navigator.clipboard.writeText(siteUrl);
+                status.textContent = 'Website link copied. Send it to your friends!';
+            } catch {
+                status.textContent = `Copy this link: ${siteUrl}`;
+            }
+        });
+
+        shareButton.addEventListener('click', async () => {
+            if (navigator.share) {
+                try {
+                    await navigator.share({ title: 'BlockHeaven | Minecraft SMP', text: 'Join me on BlockHeaven!', url: siteUrl });
+                } catch (error) {
+                    if (error.name !== 'AbortError') status.textContent = 'Sharing is unavailable here. Copy the link instead.';
+                }
+            } else {
+                copyButton.click();
+            }
+        });
+    </script>
+</body>
+</html>

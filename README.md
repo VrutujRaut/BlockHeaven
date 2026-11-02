@@ -43,7 +43,7 @@ The join page says Discord is required for authentication and events. Java and B
 
 When server details change, update both the visible home-page values in `index.html` and the `serverIP` value in `script.js`. When replacing the modpack, update its filename, displayed version, and download link together in `modpack.html`.
 
-The social metadata currently points to the standard GitHub Pages address `https://vrutujraut.github.io/BlockHeaven/`. If the site is published on a different domain, update the canonical, Open Graph, and Twitter image URLs in `index.html` and `preview.html` to match it. Social platforms fetch these tags from the published page; local previews do not appear in public shares until the site and preview image are deployed.
+The social metadata points to `https://block-heaven.net/`. Social platforms fetch these tags from the published page; the domain's DNS must point to GitHub Pages for the preview link and image to resolve.
 
 `script.js` refreshes the Minecraft server status every 30 seconds using `api.mcsrvstat.us` and reads Discord widget data from Discord's public widget endpoint. These live features need an internet connection and can show an error or remain unchanged if the external service is unavailable.
 
